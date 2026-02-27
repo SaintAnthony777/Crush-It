@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cj51pg3r6puxr"]
+
+[ext_resource type="Script" uid="uid://do4624tese5np" path="res://huffman/huffman_rle.gd" id="1_egrmo"]
+
+[node name="Huffman remake" type="Node2D"]
+script = ExtResource("1_egrmo")

@@ -1,0 +1,116 @@
+[gd_scene load_steps=3 format=3 uid="uid://2ol3bvh8sa51"]
+
+[ext_resource type="Script" uid="uid://6e58y100xfou" path="res://Scenes/Mainscene/maincontrol_node.gd" id="1_1okao"]
+[ext_resource type="PackedScene" uid="uid://cj51pg3r6puxr" path="res://huffman/huffman_remake.tscn" id="1_hxe3k"]
+
+[node name="MaincontrolNode" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1okao")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Huffman remake" parent="." instance=ExtResource("1_hxe3k")]
+
+[node name="Maintitle" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -30.5
+offset_right = 30.5
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0.913725, 1)
+theme_override_font_sizes/font_size = 105
+text = "Crush It"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FileDialog" type="FileDialog" parent="."]
+title = "Open a File"
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.txt ; Text Files")
+
+[node name="Ouvrir un Fichier" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -381.0
+offset_right = 37.0
+offset_bottom = -350.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Ouvrir Un fichier
+"
+
+[node name="Compresser" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -87.0
+offset_top = -272.0
+offset_right = 15.0
+offset_bottom = -241.0
+grow_horizontal = 2
+grow_vertical = 0
+disabled = true
+text = "Compresser"
+
+[node name="texte_de_succes" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -175.0
+offset_top = -138.0
+offset_right = 144.0
+offset_bottom = -115.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Compression et decompression terminée"
+
+[node name="Taille du fichier" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -446.0
+offset_top = -11.0
+offset_right = 437.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]
+[connection signal="pressed" from="Ouvrir un Fichier" to="." method="_on_ouvrir_un_fichier_pressed"]
+[connection signal="pressed" from="Compresser" to="." method="_on_compresser_pressed"]
