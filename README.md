@@ -1,4 +1,4 @@
-# Crush It de RADAHY Anthony
+# Crush It by RADAHY Anthony 
 Une application assez simple codé en godot engine, il permet de compresser les fichiers textes<br>
 ***À noter que l'exécutable ne fonctionne que sous linux***
 # Comment utiliser ?
