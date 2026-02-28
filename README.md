@@ -4,8 +4,8 @@ Une application assez simple codé en godot engine, il permet de compresser les 
 # Comment utiliser ?
 ## 1ère méthode (ne fonctionne que sous linux)
 Très simple, il suffit de lancer l'executable, "Crush it beta version.x86_64", suite à cela une interface s'ouvrira, et il suffit de cliquer sur le boutton ouvrir un fichier, suite à cela une boîte de dialogue s'ouvrira et il faut selectionner le fichier texte, après, le bouton compresser sera valide si la taille du fichier est acceptable (dépasse les 100MO).<br>
-## 2ème méthode (nécessite le moteur de jeu godot engine version 4.4.1 ou supérieur disponible sur le site [godot engine officiel](https://godotengine.org/download/archive/4.4.1-stable/) 
-Lancer le moteur de jeu, naviguer Vers le répertoire du projet ( c'est à dire charger le fichier project.godot ), puis lancer le projet une fois chargé avec F5<br>
+## 2ème méthode (nécessite le moteur de jeu godot engine version 4.4.1 ou supérieur disponible sur le site [godot engine officiel](https://godotengine.org/download/archive/4.4.1-stable/) )
+Lancer le moteur de jeu, naviguer Vers le répertoire du projet ( c'est à dire charger le fichier project.godot ), puis lancer le projet une fois chargé avec F5, le reste est équivalent à la première méthode<br>
 # Sorties :
 Une fois la compression lancée, il n'y a pas encore d'affichage de progression en cours mais une fois la compression terminée, il y aura un texte qui s'affichera en bas du boutton compresser.<br>
 Le fichier de sortie sera dans le même repertoire que le fichier source, à l'exception du fait que le fichier aura _COMPRESSED.bin à la fin et le fichier decompréssé aura _DECOMPRESSED.txt à la fin.
